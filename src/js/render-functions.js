@@ -1,19 +1,12 @@
-// Описаний у документації
 import SimpleLightbox from 'simplelightbox';
-// Додатковий імпорт стилів
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
 });
-
-const loader = document.querySelector('.loader');
+const gallery = document.querySelector('.gallery');
 
 export function createMarkup(images) {
-  const gallery = document.querySelector('.gallery');
-
-  loader.style.display = 'none';
-
   const markup = images
     .map(
       ({
